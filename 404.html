@@ -17,17 +17,11 @@ border-width:2px;}
 .info h2{font-size:15px;}
         </style>
         <script>
-            const countEl = document.getElementById('count');
-
-updateVisitCount();
-
-function updateVisitCount() {
-    fetch('https://api.countapi.xyz/update/Devansh/?amount=1')
+     fetch('https://api.countapi.xyz/update/Devansh/?amount=1')
     .then(res => res.json())
     .then(res => {
         counter.innerHTML = res.value;
     })
-}
         </script>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
