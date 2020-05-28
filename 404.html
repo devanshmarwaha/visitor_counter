@@ -25,7 +25,7 @@ function updateVisitCount() {
     fetch('https://api.countapi.xyz/update/Devansh/?amount=1')
     .then(res => res.json())
     .then(res => {
-        countEl.innerHTML = res.value;
+        counter.innerHTML = res.value;
     })
 }
         </script>
