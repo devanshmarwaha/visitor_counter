@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .page{background:linear-gradient(to right,grey,lightgrey,grey);
+width:360px;
+height:auto;
+border-radius:100px;
+border-color:gray;
+border-style:solid;
+border-width:2px;}
+
+.page p{font-size:17px;}
+.page h1{font-size:70px;margin:-0.3em;}
+
+.info{word-spacing:10px;}
+.info h2{font-size:15px;}
+        </style>
+        <script>
+            const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+    fetch('https://api.countapi.xyz/update/Devansh/?amount=1')
+    .then(res => res.json())
+    .then(res => {
+        countEl.innerHTML = res.value;
+    })
+}
+        </script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Website Visitor Counter</title>
+    </head>
+    <body>
+        <center>
+    <div class="page">
+          <p><b>This Page is Viewed</b></p>
+          <h1 id="counter">0</h1>
+          <p><b>times</b></p>
+          <div class="info">
+          <a href="mailto:devansh.marwaha400@gmail.com"><i class="fa fa-at" style="font-size:24px;color:black"></i></a>
+          <a href="tel:8968096689"><i class="fa fa-phone" style="font-size:24px;color:black"></i></a>
+          <a href="https://github.com/devanshmarwaha"><i class="fa fa-github" style="font-size:26px;color:black"></i></a>
+          <a href="https://www.linkedin.com/in/devansh-marwaha-a548b918b"><i class="fa fa-linkedin" style="font-size:24px;color:black"></i></a>
+          <a href="http://instagram.com/devansh._.marwaha"><i class="fa fa-instagram" style="font-size:24px;color:black"></i></a>
+             </div><br>
+          </div>
+        </center>
+    </body>
+</html>
